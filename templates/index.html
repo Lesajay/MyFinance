@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <table class = "table">
+        <thead>
+            <tr>
+                <th> Symbol</th>
+                <th> Name</th>
+                <th> Shares</th>
+                <th> Price</th>
+                <th> Total</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            {% for port in port %}
+
+            <tr>
+               <td>{{ port.Symbol }}</td>
+               <td>{{port.Name }}</td>
+               <td>{{ port.Shares}}</td>
+               <td>{{port.Price }}</td>
+               <td>{{ port.Total}}</td>
+
+
+            </tr>
+            {% endfor %}
+
+
+
+        </tbody>
+
+    </table>
+{% endblock %}
